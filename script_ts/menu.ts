@@ -50,10 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
      // 3. BOTÓN GRUPO (Entrada a la información)
+      const mensajeinformacion= document.getElementById("mensaje-informacion") as HTMLParagraphElement | null;
     const btn_grupo = document.getElementById("btn-ir-info") as HTMLButtonElement;
     if (btn_grupo) {
         // Si el grupo está vacío, deshabilitamos el botón para evitar que el jugador entre a la información sin tener personajes que mostrar.
         if (datos.mi_grupo.length == 0) {
+            mensajeinformacion.textContent = "Tu grupo está vacío. ¡Ve a contratar personajes para poder ver su información!";
             btn_grupo.disabled = true;
         }// Si el grupo tiene personajes, habilitamos el botón y le asignamos la función para cargar la sección de información al hacer clic. 
         else {
