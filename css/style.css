@@ -208,6 +208,10 @@ button:disabled {
     min-height: 100dvh;
 }
 
+.pagina-juego .juego-layout > .row {
+    min-height: 100dvh;
+}
+
 .panel-informacion,
 .panel-combate,
 .panel-tienda {

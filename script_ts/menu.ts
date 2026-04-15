@@ -16,12 +16,16 @@ document.addEventListener("DOMContentLoaded", () => {
     cargarDatosPantalla();
     let datos= cargarSesion();
     if (!datos) return;
+    const mensajeTienda = document.getElementById("mensaje-tienda") as HTMLParagraphElement | null;
     const btnContratar = document.getElementById("contratar") as HTMLButtonElement;
      if (btnContratar) {
         // Si no hay intentos, dinero o espacio en el grupo, deshabilitamos el botón para evitar que el jugador entre a la tienda sin poder comprar nada.
         if (datos.intento == 0 || datos.mi_grupo.length >= 5 || datos.dinero < 1000) {
             btnContratar.disabled = true;
             datos.intento = 0;
+            if (mensajeTienda) {
+                mensajeTienda.textContent = "No tienes intentos, dinero o espacio en el grupo para contratar nuevos personajes. ¡Ve a combatir para ganar más oro!";
+            }
             guardarSesion(datos); // Guardamos el estado actualizado para que se refleje en la tienda
         } else {
             btnContratar.addEventListener('click', () => {
@@ -74,25 +78,52 @@ document.addEventListener("DOMContentLoaded", () => {
             if (modal) new bootstrap.Modal(modal).show();
         });
     }
-const btnCombate = document.getElementById("btn-combate") as HTMLButtonElement;
-btnCombate.addEventListener("click", (e) => {
-    if (btnCombate) {
-        //
-          e.preventDefault();
-        btnCombate.disabled = datos.mi_grupo.length === 0;
-        btnCombate.addEventListener("click", (e) => {
-            
+const btnCombate = document.getElementById("btn-combate") as HTMLButtonElement | null;
+const mensajeCombate = document.getElementById("mensaje-combate") as HTMLParagraphElement | null;
 
-            // generamos a la ia 
-            let equipo_enemigo = generar_equipo_ia(random(3, 5), []);
+if (btnCombate) {
+    const aliadosVivosInicial = datos.mi_grupo.filter((personaje) => personaje.vida > 0);
 
-            // 2. Inicializar el combate (Asegúrate de que esto guarde los datos en un lugar accesible)
-           const pelea = nuevo_combate(datos.mi_grupo, equipo_enemigo);
-            refrescar_pantalla(pelea);
-            // 3. Cargar la sección mediante FETCH (sin cambiar de URL)
-            cargar_secciones('../../html/combate.html', 'batalla');
-        });
+    if (aliadosVivosInicial.length === 0) {
+        btnCombate.disabled = true;
+        if (mensajeCombate) {
+            mensajeCombate.textContent = "Necesitas al menos 1 aliado con vida para combatir.";
+        }
+    } else {
+        btnCombate.disabled = false;
+        if (mensajeCombate) {
+            mensajeCombate.textContent = "";
+        }
     }
 
-})});
+    btnCombate.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // Releemos la partida para no usar datos desactualizados.
+        const partidaActual = cargarSesion();
+        if (!partidaActual) return;
+
+        const aliadosVivos = partidaActual.mi_grupo.filter((personaje) => personaje.vida > 0);
+
+        if (aliadosVivos.length === 0) {
+            btnCombate.disabled = true;
+            if (mensajeCombate) {
+                mensajeCombate.textContent = "Necesitas al menos 1 aliado con vida para combatir.";
+            }
+            return;
+        }
+
+        btnCombate.disabled = false;
+        if (mensajeCombate) {
+            mensajeCombate.textContent = "";
+        }
+
+        // Generamos a la IA e iniciamos combate solo con aliados vivos.
+        const equipo_enemigo = generar_equipo_ia(random(3, 5), []);
+        const pelea = nuevo_combate(aliadosVivos, equipo_enemigo);
+        refrescar_pantalla(pelea);
+        cargar_secciones('../../html/combate.html', 'batalla');
+    });
+}
+});
 

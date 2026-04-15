@@ -1,8 +1,8 @@
 export let nombre = [
-    'raul', 'ana', 'luis', 'maria', 'carlos', 'sofia',
-    'javier', 'laura', 'pedro', 'lucia', 'andres', 'elena', 'marta', 'diego', 'carla', 'fernando', 'isabel', 'sergio', 'alicia', 'roberto', 'paula', 'manuel', 'laura', 'jose', 'sara', 'francisco', 'maria', 'antonio', 'carmen', 'juan', 'ana',
-    'luis', 'maria', 'carlos', 'sofia', 'javier', 'laura', 'pedro', 'lucia', 'andres', 'elena', 'marta', 'diego', 'carla',
-    'fernando', 'isabel', 'sergio', 'alicia', 'roberto', 'paula', 'manuel', 'laura', 'jose', 'sara'
+    'Raul', 'Ana', 'Luis', 'Maria', 'Carlos', 'Sofia',
+    'Javier', 'Laura', 'Pedro', 'Lucia', 'Andres', 'Elena', 'Marta', 'Diego', 'Carla', 'Fernando', 'Isabel', 'Sergio', 'Alicia', 'Roberto', 'Paula', 'Manuel', 'Laura', 'Jose', 'Sara', 'Francisco', 'Maria', 'Antonio', 'Carmen', 'Juan', 'Ana',
+    'Luis', 'Maria', 'Carlos', 'Sofia', 'Javier', 'Laura', 'Pedro', 'Lucia', 'Andres', 'Elena', 'Marta', 'Diego', 'Carla',
+    'Fernando', 'Isabel', 'Sergio', 'Alicia', 'Roberto', 'Paula', 'Manuel', 'Laura', 'Jose', 'Sara'
 ];
 export class Personaje {
     constructor(img, nombre, vida, vida_max, ataque, tipo, precio, uso, max_uso) {
