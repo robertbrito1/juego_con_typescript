@@ -48,5 +48,15 @@ Pasar el proyecto a TypeScript permite:
 Creado por robertbrito1(https://github.com/robertbrito1) y Bruno brito (https://github.com/losbritos) como parte de un ejercicio académico 💻✨
 
 ---
+## Permisos de Uso
+
+- **Puedes usar y modificar el código libremente.**
+- **No está permitido monetizar:** No puedes obtener ganancias comerciales directas del código o derivaciones de este.
+- **Se debe mantener el reconocimiento de autoría.**
+
+Si tienes dudas sobre usos específicos, por favor, contacta con el autor.
+---
 
 ¡Si te sirvió este proyecto, no dudes en dejar una estrella ⭐ o compartir tus sugerencias y mejoras!
+
+
