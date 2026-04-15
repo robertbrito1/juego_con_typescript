@@ -22,7 +22,7 @@
             <div class="col-8 centro-juego d-flex flex-column h-100">
                 <div class="mt-0 mb-4 w-100 px-3">
                     <div class="d-flex justify-content-center m-3">
-                        <img src="/img/titulo.PNG" class="d-block mx-auto" style="max-width: 300px;">
+                        <img src="img/titulo.PNG" class="d-block mx-auto" style="max-width: 300px;">
                     </div>
                 </div>
 
@@ -42,8 +42,7 @@
                     <div class="row justify-content-center mt-3">
                         <div class="col-12 col-md-4">
                             <button id="cargar" class="btn btn-dark rounded-pill shadow w-100 py-2 border-0 opacity-75"
-                                onclick="Cargar()">📂 Cargar
-                                Partida</button>
+                                onclick="Cargar()">📂 Cargar Partida</button>
                         </div>
                     </div>
                 </div>
@@ -63,19 +62,17 @@
             </footer>
         </div>
     </div>
+    
     <script src="js/bootstrap.bundle.min.js"></script>
-   
     <script type="module" src="script/menu.js"></script>
 
-     <script type="module">
-        import { cargar_datos } from 'script/carga_guardar.js';
+    <script type="module">
+        // RUTA CORREGIDA: Añadido ./ para evitar errores de carga
+        import { cargar_datos } from './script/carga_guardar.js';
 
-        // Creamos un puente global para que el onclick del HTML pueda ver la función del módulo
         window.Cargar = function () {
-            
             cargar_datos();
         };
     </script>
 </body>
-
 </html>
