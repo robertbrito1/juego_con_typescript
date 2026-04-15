@@ -1,0 +1,280 @@
+/* Color rojo sangre profundo para los laterales */
+body {
+    user-select: none;
+    -webkit-user-select: none;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+.cargando{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.796), rgba(0, 0, 0, 0.7)), url('/gift/load.gif');
+}
+
+
+
+.lateral-sangre {
+    background-color: #2b0000;
+    /* Un tono casi negro-rojizo */
+    min-height: 100vh;
+}
+
+/* Configuración de la imagen central */
+.centro-juego {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.796), rgba(0, 0, 0, 0.7)), url('/gift/castillo.gif');
+    background-size: cover;
+    background-position: center;
+    border-left: 10px solid #81260a;
+    border-right: 10px solid #81260a;
+    /**background-color: #411f01;*/
+
+}
+
+/* Botón personalizado "Sangre" */
+.btn-sangre {
+    background-color: #5a0606;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-sangre:hover {
+    background-color: #700404;
+    transform: translateY(-3px);
+    /* Efecto de que flota al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    background-image: url('/gift/antorcha.gif');
+    /* Asegúrate que sea .gif */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80%;
+    max-width: 100px;
+    height: 100px;
+    background-position: center;
+    box-shadow: 0 10px 20px rgb(255, 0, 0);
+}
+
+.btn a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.fondo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/gift/video.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.tienda {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/gift/contratar.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.informacion {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.796), rgba(0, 0, 0, 0.7)), url('/gift/cielo.gif');
+}
+
+.hogera {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/gift/hoguera.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 10rem;
+    height: 10rem;
+    margin: auto;
+    box-shadow: 0 10px 20px rgb(255, 102, 0), 0 5px 15px rgb(255, 235, 121);
+}
+
+.boton-ataque {
+    background-image: url('/img/ataque.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10rem;
+    height: 10rem;
+}
+
+.contenedor-combate {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/gift/pelea.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.combate2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/gift/pelea2.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Tamaño para móvil (por defecto) */
+.boton-ataque {
+    width: 50px;
+    height: 50px;
+
+
+    box-shadow: 0px 0px 15px red;
+}
+
+.victoria {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/gift/victoria.gif');
+    /* Dale una altura fija */
+    background-size: cover;
+    /* El GIF cubrirá todo el cuadro */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que el GIF se repita como mosaico */
+    min-height: 50rem;
+    max-height: auto;
+    width: auto;
+    max-width: auto;
+
+}
+
+.derrota {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/gift/derrota.gif');
+    /* Dale una altura fija */
+    background-size: cover;
+    /* El GIF cubrirá todo el cuadro */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que el GIF se repita como mosaico */
+    min-height: 30rem;
+    max-height: auto;
+    width: auto;
+    max-width: auto;
+
+}
+
+/* Tamaño para pantallas grandes (MD en adelante) */
+@media (min-width: 768px) {
+    .boton-ataque {
+        width: 150px;
+        /* Aumentamos a 150px para que se vea imponente */
+        height: 150px;
+        font-size: 2.5rem;
+        /* Texto bien grande */
+        border: 4px solid white;
+        box-shadow: 0px 0px 30px red;
+    }
+
+    .boton-ataque:hover {
+        transform: scale(1.1);
+        /* Se agranda un poco al pasar el mouse */
+    }
+}
+
+/* Selecciona cualquier botón que tenga el atributo 'disabled' */
+button:disabled {
+    background-color: #3b3b3b !important;
+    /* Gris oscuro */
+    color: #e2e2e2 !important;
+    /* Texto gris claro */
+    cursor: not-allowed;
+    /* Cursor de prohibido */
+    opacity: 0.6;
+    /* Transparencia */
+    
+}
+
+.copa {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/gift/copa.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 10rem;
+    height: 10rem;
+    margin: auto;
+    box-shadow: 0 10px 20px rgb(255, 102, 0), 0 5px 15px rgb(255, 235, 121);
+}
+
+.pagina-inicio,
+.pagina-juego {
+    min-height: 100dvh;
+}
+
+.inicio-layout,
+.juego-layout {
+    min-height: 100dvh;
+}
+
+.panel-informacion,
+.panel-combate,
+.panel-tienda {
+    min-height: 0;
+}
+
+.cabecera-tienda {
+    min-height: 5rem;
+}
+
+@media (max-width: 767.98px) {
+    body,
+    .pagina-inicio,
+    .pagina-juego {
+        overflow-y: auto !important;
+    }
+
+    .inicio-layout,
+    .juego-layout,
+    .juego-layout > .row,
+    .pagina-inicio .vh-100,
+    .pagina-juego .vh-100 {
+        height: auto !important;
+        min-height: 100dvh;
+    }
+
+    .lateral-sangre {
+        min-height: 5rem;
+    }
+
+    .centro-juego {
+        border-left: 0;
+        border-right: 0;
+        min-height: auto;
+        padding-bottom: 1rem;
+    }
+
+    #contenedor-juego {
+        overflow: visible !important;
+        padding: 1rem !important;
+    }
+
+    .panel-informacion,
+    .panel-combate,
+    .panel-tienda,
+    .combate2 {
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+    }
+
+    .panel-combate #zona-combate,
+    .panel-informacion #mi-equipo,
+    .panel-tienda #contenedor-tienda {
+        align-items: stretch !important;
+    }
+
+    .hogera,
+    .copa {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .victoria,
+    .derrota {
+        min-height: 100dvh;
+        background-position: center top;
+    }
+}
+

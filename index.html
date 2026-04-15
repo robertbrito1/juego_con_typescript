@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sworth</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class=" vh-100 d-flex flex-column overflow-hidden">
+        <div class="row flex-grow-1 g-0" style="min-height: 0;">
+
+            <div class="col-2 lateral-sangre d-md-block h-100">
+                <div class="d-flex justify-content-center mt-5">
+                    <div class="logo"></div>
+                </div>
+            </div>
+
+            <div class="col-8 centro-juego d-flex flex-column h-100">
+                <div class="mt-0 mb-4 w-100 px-3">
+                    <div class="d-flex justify-content-center m-3">
+                        <img src="/img/titulo.PNG" class="d-block mx-auto" style="max-width: 300px;">
+                    </div>
+                </div>
+
+                <div class="mt-auto mb-4 w-100 px-3">
+                    <div class="row justify-content-center g-3">
+                        <div class="col-6 col-md-3">
+                            <button id="empezar_normal"
+                                class="btn btn-sangre rounded-pill shadow-lg w-100 py-3 fw-bold border-0">NORMAL</button>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <button id="empezar_dificil"
+                                class="btn btn-sangre rounded-pill shadow-lg w-100 py-3 fw-bold border-0">
+                                DIFÍCIL
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-12 col-md-4">
+                            <button id="cargar" class="btn btn-dark rounded-pill shadow w-100 py-2 border-0 opacity-75"
+                                onclick="Cargar()">📂 Cargar
+                                Partida</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2 lateral-sangre d-md-block h-100">
+                <div class="d-flex justify-content-center mt-5">
+                    <div class="logo"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-0">
+            <footer class="col-12 bg-dark text-center py-2"
+                style="color: rgb(252, 5, 5); border-top: 8px solid #81260a;">
+                <p class="m-0 p-0">Diseñado por: Robert Brito y Alex Brito- 2026</p>
+            </footer>
+        </div>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+   
+    <script type="module" src="/script/menu.js"></script>
+
+     <script type="module">
+        import { cargar_datos } from '/script/carga_guardar.js';
+
+        // Creamos un puente global para que el onclick del HTML pueda ver la función del módulo
+        window.Cargar = function () {
+            
+            cargar_datos();
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego - Sworth</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="bg-dark text-white pagina-juego">
+    <div class="container-fluid juego-layout">
+        <div class="row g-0">
+
+            <div class="col-12 col-md-3 p-3 bg-black bg-opacity-50 border border-primary-subtle rounded-4"
+                style="max-height: 100vh;">
+                <div
+                    class="d-flex flex-row flex-wrap flex-md-column justify-content-around align-items-start h-100 gap-3">
+                    <div class="stat-item">
+                        <p id="victoria" class="m-0 fs-5 fw-semibold text-uppercase text-white"></p>
+                    </div>
+                    <div class="stat-item">
+                        <p id="derrota" class="m-0 fs-5 fw-semibold text-uppercase text-danger"></p>
+                    </div>
+                    <div class="stat-item">
+                        <p id="dinero" class="m-0 fs-5 fw-semibold text-uppercase text-warning"></p>
+                    </div>
+                    <div class="stat-item">
+                        <p id="intentos" class="m-0 fs-5 fw-semibold text-uppercase text-info"></p>
+                    </div>
+                    <div class="stat-item">
+                        <p id="informacion" class="m-0 fs-5 fw-semibold text-uppercase"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-9 d-flex flex-column">
+
+                <div id="contenedor-juego" class="flex-grow-1 p-4 text-center d-flex flex-column">
+
+                    <div class="d-flex justify-content-center mb-4">
+                        <img src="/img/titulo.PNG" class="img-fluid" style="max-width: 300px;">
+                    </div>
+
+                    <div class="bg-black bg-opacity-25 border rounded-4 border-primary-subtle mx-auto p-4 mb-4 mt-5"
+                        style="max-width: 50rem;">
+                        <p>Instrucciones generales:</p>
+                        <p>* Contrata unidades para formar tu ejercito </p>
+                        <p>* Combate contra rivales para conseguir oro y victorias para ganar la partida </p>
+                        <p>* Despide unidades para recuperar oro invertido </p>
+                        <p>* Acuerdate de curar a tus tropas despues de cada combate </p>
+                    </div>
+
+                    <div class="p-3 mt-auto">
+                        <div class="p-3 bg-black bg-opacity-25 border rounded-4 border-primary-subtle mx-auto"
+                            style="max-width: 45rem;">
+                            <div class="d-flex flex-wrap gap-2 justify-content-center m-2 small">
+                                <button id="contratar" class="btn btn-danger">Contratar</button>
+                                <button id="btn-ir-info" class="btn btn-danger">Información</button>
+                                <button id="btn-combate" class="btn btn-danger">Combate</button>
+                                <button id="guardar" class="btn btn-danger">Guardar</button>
+                                <a href="../index.html" class="btn btn-outline-light">Salir</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <footer class="p-2 bg-black bg-opacity-75 mt-2 border rounded-4 border-primary-subtle text-center">
+                    <p class="m-0 small text-white">Pie de página - Robert Brito y Alex Brito - 2026</p>
+                </footer>
+
+            </div>
+            <!-- Modal para guardar el progreso  ventanas emergentes-->
+            <div class="modal fade" id="modalGuardado" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark text-white border border-danger">
+                        <div class="modal-body text-center p-5">
+                            <h2 class="fw-bold mb-4">¡LOGRADO!</h2>
+                            <p class="fs-5">Tu progreso ha sido almacenado con éxito.</p>
+                            <button type="button" class="btn btn-danger btn-lg px-5 mt-3 fw-bold"
+                                data-bs-dismiss="modal">
+                                CONTINUAR
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+           
+
+
+
+            <script src="/js/bootstrap.bundle.min.js"></script>
+            <script type="module" src="../script/menu.js"></script>
+</body>
+
+</html>

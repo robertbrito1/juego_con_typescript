@@ -1,0 +1,61 @@
+<div class="row g-2 m-0 combate2 panel-combate" style="min-height: 46rem;">
+
+    <div class="col-12 col-md-8 d-flex flex-column h-100 bg-dark bg-opacity-50 border rounded-4">
+        <p id="mensaje-no-aliado" class="mt-2 text-center px-3 text-danger"></p>
+        <div class="flex-grow-1 d-flex justify-content-center align-items-center" id="zona-combate">
+            </div>
+
+        <div class="p-3">
+            <div class="d-flex bg-opacity-50 text-white w-100 justify-content-center mx-auto shadow-lg border rounded-4 border-primary-subtle" >
+                <p id="log-batalla" class="mt-2 text-center px-3">¡inicia el combate con el boton!</p>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-4 p-2 bg-black bg-opacity-50 border border-primary-subtle rounded-4 h-100">
+        <div class="d-flex flex-column justify-content-center align-items-start h-100 gap-4 ps-3">
+            <p id="informacion" class="m-0 fs-5 fw-semibold text-uppercase shadow-text text-info" style="text-shadow: 2px 2px 10px #000;"></p>
+            <p id="aliado_derrotado" class="m-0 fs-5 fw-semibold text-uppercase shadow-text text-danger" style="text-shadow: 2px 2px 10px #000;"></p>
+            <p id="enemigo" class="m-0 fs-5 fw-semibold text-uppercase shadow-text text-warning" style="text-shadow: 2px 2px 10px #000;"></p>
+            <p id="enemigo_derrotados" class="m-0 fs-5 fw-semibold text-uppercase shadow-text text-primary" style="text-shadow: 2px 2px 10px #000;"></p>
+            <p id="recompensa" class="m-0 fs-5 fw-semibold text-uppercase shadow-text text-success" style="text-shadow: 2px 2px 10px #000;"></p>
+        </div>
+    </div>
+
+</div>
+<!-- ventanas emergentes de victoria y derrota-->
+    
+    <div class="modal fade" id="modal-victoria" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border border-success">
+                <div class="modal-body text-center p-5">
+                    <p class="fs-5 text-success fw-bold">Has ganado</p>
+                    <p class="fs-5 text-success fw-bold">Sigue asi </p>
+                    <p id="modal-oro" class="fs-4 text-warning fw-bold"></p>
+
+                    <button id="btn-modal-continuar" type="button"
+                        class="btn btn-outline-danger btn-lg px-5 mt-3 fw-bold">
+                        CONTINUAR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="modal fade" id="modal-derrota" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border border-info">
+                <div class="modal-body text-center p-5">
+                    <p class="fs-5 text-danger fw-bold">Has perdido</p>
+                    <p class="fs-5 text-success fw-bold">Intenta otra estrategia </p>
+                    <p id="modal-oro" class="fs-4 text-warning fw-bold"></p>
+
+                    <button id="btn-modal-continuar" type="button"
+                        class="btn btn-outline-danger btn-lg px-5 mt-3 fw-bold">
+                        CONTINUAR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
