@@ -243,8 +243,10 @@ export function mostrar_duelo(aliado: Personaje | null, enemigo: Personaje | nul
 
             <!-- BOTÓN VS -->
             <div class="col-2 text-center">
-                <button id="boton-atacar" class="btn btn-danger btn-lg rounded-circle shadow-lg"
-                        style="width: 80px; height: 80px; font-weight: bold; border: 4px solid white;">
+                <button id="boton-atacar" 
+        class="btn btn-danger rounded-circle shadow-lg fw-bold border border-4 border-white
+               p-2  fs-6     /* Pequeño en móvil */
+               p-md-4 fs-md-3 /* Grande en tablets/PC */">
                     VS
                 </button>
             </div>
