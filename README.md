@@ -58,6 +58,10 @@ Creado por robertbrito1(https://github.com/robertbrito1) y Bruno brito (https://
 
 Si tienes dudas sobre usos específicos, por favor, contacta con el autor.
 ---
+###  ¡Lo más importante: Una Demo!
+Como es un juego, **lo que más vende es verlo en acción**.
+[![Live Demo](https://img.shields.io/badge/Jugar-Ahora-brightgreen?style=for-the-badge&logo=google-chrome)](https://juego-con-typescript.onrender.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
 ¡Si te sirvió este proyecto, no dudes en dejar una estrella ⭐ o compartir tus sugerencias y mejoras!
 
